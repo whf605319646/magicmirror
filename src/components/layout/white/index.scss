@@ -1,0 +1,17 @@
+.v-page{
+    display: flex;
+    flex:1;
+    background-color: #F9F9F9;
+    position: relative;
+    & > div{
+        @include size;
+
+        .v-page {
+            @include size;
+
+            & > div{
+                @include size;
+            }
+        }
+    }
+}

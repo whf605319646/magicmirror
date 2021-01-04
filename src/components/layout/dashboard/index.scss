@@ -1,0 +1,23 @@
+html,
+body,
+#app {
+    height: 100%;
+}
+.v-container {
+    @include size();
+    
+    .outer-page {
+        @include size();
+        overflow: auto;
+
+        .inner-page {
+            @include size($height: calc(100% - .6rem));
+            position: relative;
+            
+            >div, >article {
+                @include size();
+                padding: .15rem 0;
+            }
+        }
+    }
+}
